@@ -1,0 +1,209 @@
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+                list-style: none;
+                font-family: 'Poppins', sans-serif;
+                /* color: rgb(8, 29, 47); */
+            }
+            
+             :root {
+                --anim-taxt: #eb0062;
+                --question-bg: #fff;
+                --question-text: rgb(3, 5, 45);
+                --body-bg: rgb(238, 238, 238);
+            }
+            
+            [data-theme="light-sky"] {
+                --anim-taxt: #eb0062;
+                --question-bg: #292347;
+                --question-text: #eb0062;
+                --body-bg: #1c1831;
+            }
+            
+            [data-theme="dark"] {
+                --anim-taxt: rgb(0, 255, 255);
+                --question-bg: #05083e;
+                --question-text: rgb(239, 239, 255);
+                --body-bg: rgb(1, 18, 46);
+            }
+            
+            [data-theme="third"] {
+                --anim-taxt: #1fbf77;
+                --question-bg: #1fbf77;
+                --question-text: rgb(10, 10, 44);
+                --body-bg: #052c32;
+            }
+            
+            img {
+                height: 70px;
+                width: 70px;
+                object-fit: cover;
+            }
+            
+            .next-logo {
+                width: 20%;
+                height: 30px;
+                object-fit: cover;
+                margin-right: 10px;
+            }
+            
+            body {
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 50px;
+                background-color: var(--body-bg);
+            }
+            
+            .title h3 {
+                font-size: 18px;
+                color: #eb0062;
+            }
+            
+            .title p {
+                color: #1fbf77;
+                font-weight: 500;
+            }
+            
+            .container {
+                max-width: 600px;
+            }
+            
+            .color-card {
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            .color-card-suare {
+                margin: 20px;
+                font-weight: bold;
+                padding: 5px;
+                border-radius: 3px;
+                margin: 10px;
+                text-align: center;
+                display: grid;
+                place-content: center;
+                cursor: pointer;
+            }
+            
+            #one {
+                background: #eb0062;
+            }
+            
+            #two {
+                background-color: #05083e;
+                color: rgb(255, 254, 254);
+            }
+            
+            #three {
+                background-color: #1fbf77;
+            }
+            
+            .parent {
+                margin-bottom: 10px;
+            }
+            
+            .question {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-bottom: 10px;
+                color: var(--question-text);
+                background: var(--question-bg);
+                padding: 8px;
+                cursor: pointer;
+                font-weight: bolder;
+                text-transform: capitalize;
+                border-radius: 5px;
+                border-radius: 4px;
+            }
+            
+            .icon {
+                font-size: 30px;
+                color: aqua;
+                margin-right: 20px;
+            }
+            
+            .hhh {
+                color: #f06429;
+            }
+            
+            .js {
+                color: rgb(255, 255, 0);
+            }
+            
+            .node {
+                color: rgb(0, 130, 0);
+            }
+            
+            .answer {
+                max-height: 0px;
+                overflow: hidden;
+                transition: max-height .5s ease-in-out;
+                background: var(--question-bg);
+                color: var(--question-text);
+                border-radius: 4px;
+                margin-top: 5px;
+            }
+            
+            .answer p {
+                font-size: 18px;
+                font-weight: 400;
+                margin-top: 10px;
+            }
+            
+            .botttun-container {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+            
+            .botttun-container .btn {
+                font-size: 16px;
+                font-weight: bold;
+                padding: 8px 14px;
+                text-decoration: none;
+                background: var(--question-text);
+                color: var(--question-bg);
+                border-radius: 4px;
+            }
+            
+            .parent.active .answer {
+                min-height: fit-content;
+                max-height: 1630px;
+                animation: fade 1s ease-in-out;
+                transition: max-height .5s ease-in-out;
+                padding: 10px;
+                padding-bottom: 30px;
+            }
+            
+            .parent.active .question {
+                border: 1px solid var(--question-text);
+            }
+            
+            @keyframes fade {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+            
+            .title {
+                height: 200px;
+            }
+            
+            .title span {
+                display: block;
+                color: var(--anim-taxt);
+                font-size: 22px;
+                font-weight: bold;
+                height: 20px;
+            }
