@@ -17,10 +17,10 @@
             }
             
             [data-theme="light-sky"] {
-                --anim-taxt: #eb0062;
-                --question-bg: #292347;
-                --question-text: #eb0062;
-                --body-bg: #1c1831;
+                --anim-taxt: #000808;
+                --question-bg: #09012c;
+                --question-text: #caf7fb;
+                --body-bg: #ffffff;
             }
             
             [data-theme="dark"] {
@@ -158,7 +158,7 @@
             
             .botttun-container {
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-start;
                 margin-top: 20px;
             }
             
@@ -170,6 +170,7 @@
                 background: var(--question-text);
                 color: var(--question-bg);
                 border-radius: 4px;
+                margin: 10px;
             }
             
             .parent.active .answer {
